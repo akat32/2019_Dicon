@@ -44,10 +44,10 @@ const item  = {
         return res.status(200).json(result)
     },
     randomItem: async (req: Request, res: Response, next: NextFunction) => {
-        let size = await Items.find().count()
-        let random = Math.floor(Math.random() * size) + 0
+        // let size = await Items.find().count()
+        // let random = Math.floor(Math.random() * size) + 0
         let result = await Items.aggregate(
-            [ { $sample: { size: random } } ]
+            [ { $sample: { size: 2 } } ]
         )
         return res.status(200).json(result)
     }
