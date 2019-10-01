@@ -1,6 +1,7 @@
 import * as mongoose from "mongoose"
 import { Users } from './Schema/Users/Users'
 import { Items } from './Schema/Items/Items'
+import { In } from './Schema/Items/in'
 const uri: string = "mongodb://127.0.0.1:27017/aaqqaa";
 
 let db = mongoose.connect(uri, (err: any) => {
@@ -11,4 +12,4 @@ let db = mongoose.connect(uri, (err: any) => {
   }
 });
 
-export { Users, Items }
+export { Users, Items, In }
