@@ -15,5 +15,5 @@ app.post('/signup', auth.signup)
 
 app.post('/searchItem', item.search)
 app.post('/addItem', item.add)
-
+app.post('/allItem', item.all)
 export default app

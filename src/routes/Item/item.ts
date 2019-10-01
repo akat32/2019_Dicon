@@ -18,8 +18,12 @@ const item  = {
         }
     }, 
     search: async (req: Request, res: Response, next: NextFunction) => {
-        let result = await Items.findOne({itemName : req.body.itemName})
+        let result = await Items.findOne({itemName : {$regex: req.body.itemName}})
         if(!result) return res.status(404).json({message : "not found!"})
+        return res.status(200).json(result)
+    },
+    all: async (req:Request, res: Response, next: NextFunction ) => {
+        let result = await Items.find()
         return res.status(200).json(result)
     }
 }

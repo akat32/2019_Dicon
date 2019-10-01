@@ -87,4 +87,15 @@
     }
 
     404 : { message : "not found!" }
-    
+
+* POST /allItem ( 전체 아이템 )
+
+> Response
+
+    200 : {
+        "_id": "5d9357187148a702747c9066",
+        "itemName": "의자의자",
+        "itemData": "만들의자",
+        "itemPic": "default",
+        "__v": 0
+    }
